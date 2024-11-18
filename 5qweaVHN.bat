@@ -6,11 +6,17 @@
 @echo off
 
 chcp 65001 > nul
-if exist ssh exit /b
 
 echo.
 set /p "name_and_surname=Unesite Vaše ime i prezime: "
 set /p "email=Unesite Vaš email: "
+
+git config --local user.name "%name_and_surname%"
+git config --local user.email "%email%"
+git config --local core.sshCommand "ssh -i ../ssh/key"
+
+if exist ssh exit /b
+
 :password_input
 echo.
 for /f "usebackq delims=" %%p in (`powershell -Command "$password = Read-Host -AsSecureString 'Unesite lozinku Vašeg SSH ključa'; [Runtime.InteropServices.Marshal]::PtrToStringAuto([Runtime.InteropServices.Marshal]::SecureStringToBSTR($password))"`) do set "password=%%p"
