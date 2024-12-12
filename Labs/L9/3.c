@@ -6,7 +6,7 @@ kompleksnih brojeva sortirati opadajuće po modulu. Na kraju, ispisati sortirani
 #include <stdlib.h>
 #include <math.h>
 
-typedef struct KOMPLEKS {
+typedef struct {
     double re;
     double im;
 } KOMPLEKS;

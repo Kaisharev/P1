@@ -36,8 +36,6 @@ int main(void) {
     } while (n<0 || n>100);
     
     factoriel_of_large_number(n, factoriel_array);
-	
 
-	
 	return 0;
 }

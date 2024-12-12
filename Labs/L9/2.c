@@ -7,7 +7,7 @@ odgovarajuću poruku. Takođe, ako matrice ne mogu da se pomnože, potrebno je i
 
 #include <stdio.h>
 #include <stdlib.h>
-typedef struct Matrix
+typedef struct
 {
     int rows;
     int columns;

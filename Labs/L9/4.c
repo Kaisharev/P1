@@ -4,7 +4,7 @@ u obzir kraćenje rezultujućeg razlomka.*/
 #include <math.h>
 #include <stdio.h>
 
-typedef struct RAZLOMAK {
+typedef struct {
     int numerator;
     int denominator;
 } RAZLOMAK;
