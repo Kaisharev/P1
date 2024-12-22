@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 typedef struct {
-    char oznaka;       // Slovna oznaka tačke (npr. 'A', 'B', 'C')
-    double x;          // x koordinata
-    double y;          // y koordinata
+    char oznaka;      
+    double x;          
+    double y;          
 } TACKA;
 
 typedef struct {
-    TACKA vrh1;        // Prvi vrh trougla
-    TACKA vrh2;        // Drugi vrh trougla
-    TACKA vrh3;        // Treći vrh trougla
+    TACKA vrh1;        
+    TACKA vrh2;        
+    TACKA vrh3;        
 } TROUGAO;
 
 void citaj(TACKA *t){

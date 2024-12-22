@@ -61,10 +61,9 @@ int main (void){
     scanf ("%d", &n);
 
     ARTIKAL *artikli = ucitaj (&n);
- printf("\nIspis unetih artikala:\n");
+    printf("\nIspis unetih artikala:\n");
     ispisi(artikli, n);
 
-    // Pronalazak artikla po ID-u
     int trazeni_id;
     printf("\nUnesite ID artikla koji želite pronaći: ");
     scanf("%d", &trazeni_id);
@@ -72,21 +71,18 @@ int main (void){
     ARTIKAL *pronasao = pronadji(artikli, n, trazeni_id);
     if (pronasao != NULL) {
         printf("\nPronađeni artikal:\n");
-        ispisi(pronasao, 1); // Ispis samo jednog artikla
-        free(pronasao);      // Oslobađanje memorije za dinamičku kopiju
+        ispisi(pronasao, 1); 
+        free(pronasao);      
     } else {
         printf("\nArtikal sa ID %d nije pronađen.\n", trazeni_id);
     }
 
-    // Sortiranje artikala
     printf("\nSortiranje artikala po ID-u...\n");
     sortiraj(artikli, n);
 
-    // Ispis artikala nakon sortiranja
     printf("\nIspis artikala nakon sortiranja:\n");
     ispisi(artikli, n);
 
-    // Oslobađanje memorije
     free(artikli);
 
     return 0;
