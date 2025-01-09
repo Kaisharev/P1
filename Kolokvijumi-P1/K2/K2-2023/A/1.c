@@ -12,11 +12,11 @@ int sum_of_digits (int number){
 
 int* formiraj (int *niz, int n, int *m) {
     int counter = 0;
-    int *array = (int*) malloc(counter * sizeof(int));
 
     for (int i = 0; i<n; i++){
         if (niz[i]>0 && sum_of_digits(niz[i])%2==0) counter++;
     }
+    int *array = (int*) malloc(counter * sizeof(int));
     if (counter==0){
         *m = 0;
         return NULL;
@@ -41,14 +41,16 @@ int prirodni (int mat[][10], int n, int m){
             max_count=counter;
             max_row_index = i;
         }
-        free (row);
+        if (row != NULL) free (row);
     }
     return max_row_index;
 }
 
 int main (int argc, char* argv[]){
-    int mat[2][3]=
-    {{3,2,4},{1,6,8}};
+    int mat[2][10] = {
+        {3, 22, 4, 0, 0, 0, 0, 0, 0, 0},
+        {1, 6, 8, 0, 0, 0, 0, 0, 0, 0}
+    };
 
     int result = prirodni(mat,2,3);
 
