@@ -3,7 +3,7 @@
 
 int** ucitaj(int *n, int *m){
     int **matrix = (int**)malloc (*n*sizeof(int*)) ;
-    for (int i = 0; i<n; i++){
+    for (int i = 0; i<*n; i++){
         matrix[i] = (int*)malloc(*m*sizeof(int));
         if (matrix[i]==NULL) {
             printf ("MALLOC nije prošao za red %d", i);
@@ -12,8 +12,8 @@ int** ucitaj(int *n, int *m){
             exit(-1);
         }
 
-        for (int i = 0; i<n; i++){
-            for (int j = 0; j<m; j++){
+        for (int i = 0; i<*n; i++){
+            for (int j = 0; j<*m; j++){
                 printf ("Clan [%d][%d]: ", i,j);
                 scanf ("%d", &matrix[i][j]);
             }

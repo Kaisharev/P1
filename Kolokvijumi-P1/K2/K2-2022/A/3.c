@@ -30,14 +30,9 @@ int main (int argc, char *argv[]){
     fgets(string, sizeof(string), stdin);
     clear_new_line(string);
 
-    char modified_string[string_lenght(string)];
     for (int i = 0; i<string_lenght(string); i++){
-            modified_string[i]=string[i];
-        if (is_lower(string[i])){
-            upper(&modified_string[i]);
-        }
+        if (is_lower(string[i])) upper(&string[i]);
     }
-        modified_string[string_lenght(string)] = '\0'; 
-        printf ("%s", modified_string);
+        printf ("%s", string);
 
 }
