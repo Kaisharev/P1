@@ -1,3 +1,11 @@
+/*
+    NAPOMENA: 
+    Većina zadataka (uključujući ovaj) NEMAJU main funkciju, odnosno kad se kompajliraju
+    neće se ništa pokrenuti. Razlog za to je da u tekstu zadatka nigdje nije traženo
+    a meni se nije dalo kucat...
+
+    U suštini, ako hoćete testirati, samo napišite main f-ju koja će implementirati sve funkcionalnosti.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
