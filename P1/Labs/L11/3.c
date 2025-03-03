@@ -23,7 +23,7 @@ void ispisi(DOKUMENT document){
 
 int main(){
     int n, min_size;
-    printf ("Unesite broj do kumenata i minimalnu veličinu: ");
+    printf ("Unesite broj dokumenata i minimalnu veličinu: ");
     scanf ("%d %d", &n, &min_size);
     DOKUMENT *documents =formiraj(&n);
 
