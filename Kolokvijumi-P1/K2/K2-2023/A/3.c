@@ -21,8 +21,7 @@ char* remove_spaces(const char *str){
     int counter = 0;
     for (int i = 0; i<string_length(str); i++){
         if (is_space(str[i])) continue;
-        modified_string[counter] = str[i];
-        counter++;
+        modified_string[counter++] = str[i];
     }
 
     return modified_string;

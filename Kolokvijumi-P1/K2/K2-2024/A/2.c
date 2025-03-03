@@ -7,23 +7,23 @@ int string_length (const char *str){
     }
     return counter;
 }
+
 char* podstring (const char *str, int s, int d){
     if (s>d || s<0||s>string_length(str)-1||d>string_length(str)-1) return NULL;
     int strlength = d-s+1;
-    char *substring = (char *)malloc ((strlength+1)*sizeof (char));
+    char *substring = (char *)calloc (strlength*sizeof (char), sizeof(char));
     int counter = 0;
     for (int i = s; i<= d; i++){
         
         substring[counter++]=str[i];
     }
-    substring[counter] = '\0';  
     return substring;
 }
 
 int pocinje (const char *s, const char *t){
     int counter = 0;
     for (int i = 0; i<string_length(t); i++){
-        if (s[i] != t[i] || s[i]=='\0') return 0;
+        if (s[i] != t[i]) return 0;
     }
     return 1;
 }

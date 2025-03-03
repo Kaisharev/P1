@@ -22,10 +22,14 @@ typedef struct valjak
 
 VALJAK ucitaj (){
     VALJAK valjak;
-    printf ("Unesite poluprecnik valjka: ");
-    scanf ("%lf", &valjak.poluprecnik.duzina);
-    printf ("Unesite visinu valjka: ");
-    scanf ("%lf", &valjak.visina.duzina);
+    do
+    {
+        printf ("Unesite poluprecnik valjka: ");
+        scanf ("%lf", &valjak.poluprecnik.duzina);
+        printf ("Unesite visinu valjka: ");
+        scanf ("%lf", &valjak.visina.duzina);
+    } while (valjak.poluprecnik.duzina <0 || valjak.visina.duzina==0);
+    
 
     return valjak;
 }

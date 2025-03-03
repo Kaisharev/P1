@@ -13,9 +13,9 @@ PUTANJA ucitaj(){
     {
         printf ("\nUnesite brojeve n i k: ");
         scanf ("%d %d", &path.n, &path.k);
-    }while (path.n > 100 || path.k < 2 || path.k > 10);
+    }while (path.n > 100 || path.n<1 || path.k < 2 || path.k > 10);
     
-    for (int i = 0; i< path.k; i++){
+    for (int i = 0; i< path.k-1; i++){
         printf ("Tacka %d:\n", i+1);
         for (int j = 0; j<path.n; j++){
             printf ("x[%d][%d]", i,j);
@@ -27,7 +27,7 @@ PUTANJA ucitaj(){
 
 double duzina (const PUTANJA *put){
     double length = 0.0;
-    for (int i = 0; i<put->k; i++){
+    for (int i = 0; i<put->k-1; i++){
         double sum = 0.0;
         for (int j = 0; j<put->n; j++){
             sum +=pow((put->x[i+1][j]- put->x[i][j]),2);
@@ -43,5 +43,5 @@ int main (void){
     PUTANJA putanja = ucitaj();
     double putanja_duzina = duzina(&putanja);
 
-    printf ("DUzina putanje je: %lf", putanja_duzina);
+    printf ("Duzina putanje je: %lf", putanja_duzina);
 }
