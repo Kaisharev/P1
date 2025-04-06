@@ -96,6 +96,7 @@
     "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
     "files.associations": {
         "stdlib.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "ctype.h": "c"
     }
 }
