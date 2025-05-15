@@ -26,18 +26,16 @@ int main (void){
     fgets(input,6,stdin);
     input [ strcspn (input, "\n")] = 0;
     if(strcmp(input, "START") == 0){
-        while (&queue.head != NULL){
  
             PROCESS *current;
-            if (dequeue(&queue, &current)) {
+            while (dequeue(&queue, &current)) {
                 printf("%s\n", current->name);
                 fflush(stdout);
                 sleep(current->time);
                 free(current->name);
-                free(current->time);
                 free(current);
             }
-        }
+        
     }
     queue_free(&queue);
     return 0;
