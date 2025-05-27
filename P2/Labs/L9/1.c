@@ -1,7 +1,8 @@
 #include "binary_tree.h"
 
-int main (){
-    NODE *root=add_new_node("A");
+int main()
+{
+    NODE *root = add_new_node("A");
     NODE *c1 = add_left(root, "B");
     NODE *c2 = add_right(root, "C");
     c2 = add_right(c2, "F");

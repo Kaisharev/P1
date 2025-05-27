@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct{
+typedef struct
+{
     char *sifra, *naziv;
 } PREDMET;
 
-typedef struct {
+typedef struct
+{
     char *br_indeksa, *ime, *prezime;
     PREDMET *niz;
-    int n; 
+    int n;
 } STUDENT;
