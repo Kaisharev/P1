@@ -63,6 +63,8 @@
     "cstdlib": "c",
     "string.h": "c",
     "unistd.h": "c",
-    "queue.h": "c"
-  }
+    "queue.h": "c",
+    "binary_tree.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "enabledIfIncludesResolve"
 }
